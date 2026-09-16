@@ -58,3 +58,5 @@ end
 
 gem "devise"
 gem "json", "~> 2.7"
+gem "rails-i18n"
+gem "devise-i18n"
