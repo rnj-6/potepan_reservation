@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    registrations: "users/registrations"
+    registrations: "users/registrations",
+    sessions: "users/sessions"
   }
+  get "users/profile", to: "users#profile"
+  get "users/account", to: "users#account"
+
   resources :users, only:[:show] #アカウント作成後の画面
+  resources :rooms, only:[:index] #サインイン後の画面
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -15,5 +20,5 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "rooms#index"
 end
