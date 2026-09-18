@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     sessions: "users/sessions"
   }
+  get "users", to: "users#show"
+  
   get "users/profile", to: "users#profile"
   get "users/profile/edit", to: "users#profile_edit"
   patch "users/profile", to: "users#profile_update"
@@ -11,7 +13,6 @@ Rails.application.routes.draw do
   get "users/account/edit", to: "users#account_edit"
   patch "users/account", to: "users#account_update"
 
-  resources :users, only:[:show] #アカウント作成後の画面
   resources :rooms, only:[:index] #サインイン後の画面
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
