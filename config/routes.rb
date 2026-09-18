@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     sessions: "users/sessions"
   }
   get "users", to: "users#show"
-  
+
   get "users/profile", to: "users#profile"
   get "users/profile/edit", to: "users#profile_edit"
   patch "users/profile", to: "users#profile_update"

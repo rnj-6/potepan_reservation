@@ -5,7 +5,12 @@
     <p><%= link_to "編集", users_profile_edit_path %></p>
 </div>
 
-<p>アイコン画像</p>
+<p>プロフィール画像</p>
+<% if @user.image.attached? %>
+   <%= image_tag @user.image.variant(resize_to_fill: [100, 100]) %>
+<% else %>
+   <%= image_tag "https://rails-02-sample.herokuapp.com/assets/common/default-avatar-7a6cbfd7993e89f24bfc888f4a035a83c6f1428b8bdc47eed9095f2799a40153.png", width: 100, height: 100 %>
+<% end %>
 
 <p>ユーザー名</p>
 <%= @user.name %>
