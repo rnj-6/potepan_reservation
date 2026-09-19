@@ -1,0 +1,48 @@
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    height: 70px;
+    background-color: #ffc93c;
+}
+
+.header-logo {
+    color: #204495;
+    font-size: 35px;
+    font-weight: 800;
+    font-family: "'Verdanac", Arial, sans-serif;
+
+}
+
+.header-container {
+    list-style: none;
+    display: flex;
+}
+
+.header-nav-icon img {
+    width: 50;
+    height: 50;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-nav {
+    position: relative;
+}
+
+.header-nav ul {
+    display: none;
+    list-style: none;
+}
+
+.header-nav ul.is-open {
+    display: block;
+}
