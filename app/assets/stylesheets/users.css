@@ -1,30 +1,32 @@
 a {
-    text-decoration: none;
+text-decoration: none;
 }
 
-p {
+body, p {
     margin: 0;
 }
 
+ /* ヘッダー */
 .header {
     display: flex;
     justify-content: space-between;
-
-    height: 70px;
+    align-items: center;
+    height: 80px;
     background-color: #ffc93c;
 }
 
 .header-logo {
+    margin-left: 30px;
     color: #204495;
-    font-size: 35px;
+    font-size: 45px;
     font-weight: 800;
-    font-family: "'Verdanac", Arial, sans-serif;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .header-container {
     list-style: none;
     display: flex;
+    margin-right: 30px;
 }
 
 .header-nav-icon img {
@@ -39,10 +41,48 @@ p {
 }
 
 .header-nav ul {
+    position: absolute;
+    top: 100%;
     display: none;
     list-style: none;
 }
 
 .header-nav ul.is-open {
     display: block;
+}
+
+.header-nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ログイン前 */
+.header-btn {
+    display: flex;
+    gap: 30px;
+}
+
+.header-btn a {
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+.header-btn li {
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.header-btn li:first-of-type {
+    background-color: #204495;
+}
+
+.header-btn li:last-of-type {
+    background-color: #6495ed;
+}
+
+/* ログイン中 */
+.header-nav-user p {
+    color: #204495;
+    font-weight: 700;
 }
