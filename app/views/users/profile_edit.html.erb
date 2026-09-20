@@ -1,29 +1,31 @@
-<div class="card-design-profile">
-  <h2>プロフィール</h2>
+<div class="card-design-mypage-edit">
+  <h2 class="card-design-title">プロフィール</h2>
 
   <%= form_with model: @user, url: users_profile_path, method: :patch do |f| %>
 
-    <div>
+    <div class="image-content">
       <% if @user.image.attached? %>
-        <%= image_tag @user.image.variant(resize_to_fill: [50, 50]) %>
+        <%= image_tag @user.image.variant(resize_to_fill: [100, 100]) %>
       <% else %>
         <%= image_tag "https://rails-02-sample.herokuapp.com/assets/common/default-avatar-7a6cbfd7993e89f24bfc888f4a035a83c6f1428b8bdc47eed9095f2799a40153.png" %>
       <% end %>    
       <%= f.file_field :image, id: "image-upload", hidden: true %>
-      <label for="image-upload">
-        画像アップロード
-      </label>
+      <label for="image-upload">画像アップロード</label>
     </div>
-    <div>
+
+    <div class="mypage-field">
       <%= f.label :name, "ユーザー名" %>
       <%= f.text_field :name %>
     </div>
-    <div>
+
+    <div class="mypage-field">
       <%= f.label :introduction, "自己紹介" %>
       <%= f.text_area :introduction %>
     </div>
 
-    <%= link_to "キャンセル", users_profile_path %>
-    <%= f.submit "保存" %>
+    <div class="btn-actions">
+      <%= link_to "キャンセル", users_profile_path, class: "cancel-btn" %>
+      <%= f.submit "保存", class: "update-btn" %>
+    </div>
   <% end %>
 </div>

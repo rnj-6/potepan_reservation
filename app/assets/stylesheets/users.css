@@ -190,15 +190,16 @@ input::placeholder {
     padding: 8px 14px;
 }
 
-.account-content {
+.account-content,
+.profile-content {
     margin-bottom: 30px;
     margin-left: 60px;
 }
 
-.account-content-label {
+.account-content-label,
+.profile-content-label {
     color: #686868;
     font-size: 14px;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -211,20 +212,20 @@ input::placeholder {
     position: relative;
 }
 
-.account-field {
+.mypage-field {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.account-field label {
+.mypage-field label {
     font-weight: bold;
     color: #686868;
     font-size: 16px;
     width: 180px;
 }
 
-.account-field input {
+.mypage-field input {
     width: 400px;
     height: 40px;
     box-sizing: border-box;
@@ -258,4 +259,38 @@ input::placeholder {
     border: none;
     font-size: 16px;
     padding: 10px 20px;
+}
+
+/* プロフィール */
+.card-design-mypage img {
+    border-radius: 50%;
+}
+
+.mypage-field textarea {
+    width: 400px;
+    height: 120px;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+    padding: 14px 10px;
+}
+
+.image-content {
+    margin-bottom: 30px;
+}
+
+.image-content img {
+    border-radius: 50%;
+}
+
+.image-content label {
+    color: #686868;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 78px;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    padding: 8px 16px;
 }

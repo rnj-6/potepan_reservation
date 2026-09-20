@@ -1,30 +1,31 @@
 <div class="card-design-mypage-edit">
-    <h2 class="card-design-title">アカウント</h2>
+   <h2 class="card-design-title">アカウント</h2>
     
-    <%= form_with model: @user, url: users_account_path, method: :patch do |f| %>
-       <div class="account-field">
-           <%= f.label :email, "メールアドレス" %>
-           <%= f.text_field :email %>
-        </div>
+   <%= form_with model: @user, url: users_account_path, method: :patch do |f| %>
 
-        <div class="account-field">
-           <%= f.label :current_password, "現在のパスワード" %>
-           <%= f.password_field :current_password %>
-        </div>
+      <div class="mypage-field">
+         <%= f.label :email, "メールアドレス" %>
+         <%= f.text_field :email %>
+      </div>
 
-        <div class="account-field">
-           <%= f.label :password, "変更後のパスワード" %>
-           <%= f.password_field :password, placeholder: "変更後のパスワードを入力" %>
-        </div>
+      <div class="mypage-field">
+         <%= f.label :current_password, "現在のパスワード" %>
+         <%= f.password_field :current_password %>
+      </div>
+
+      <div class="mypage-field">
+         <%= f.label :password, "変更後のパスワード" %>
+         <%= f.password_field :password, placeholder: "変更後のパスワードを入力" %>
+      </div>
     
-        <div class="account-field">
-           <%= f.label :password_confirmation, "確認用パスワード" %>
-           <%= f.password_field :password_confirmation, placeholder: "確認用パスワードを入力" %>
-        </div>
+      <div class="mypage-field">
+         <%= f.label :password_confirmation, "確認用パスワード" %>
+         <%= f.password_field :password_confirmation, placeholder: "確認用パスワードを入力" %>
+      </div>
 
-        <div class="btn-actions">
-           <%= link_to "キャンセル", users_account_path, class: "cancel-btn" %>
-           <%= f.submit "保存", class: "update-btn" %>
-        </div>
-    <% end %>
+      <div class="btn-actions">
+         <%= link_to "キャンセル", users_account_path, class: "cancel-btn" %>
+         <%= f.submit "保存", class: "update-btn" %>
+      </div>
+   <% end %>
 </div>
