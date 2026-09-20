@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   patch "users/account", to: "users#account_update"
 
   # 施設一覧
-  resources :rooms, only:[:index]
+  resources :rooms
 
   # トップページ
   root "home#index"
