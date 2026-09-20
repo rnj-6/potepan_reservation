@@ -1,7 +1,18 @@
-<h2>アカウント</h2>
+<div class="btn-menu-mypage">
+   <%= link_to "◂ 戻る", users_path, class: "back-btn" %>
+   <%= link_to "編集", users_account_edit_path, class: "edit-btn" %>
+</div>
 
-<p>メールアドレス</p>
-<%= @user.email %>
+<div class="card-design-mypage">
+   <h2 class="card-design-title">アカウント</h2>
 
-<p>パスワード</p>
-<%= @user.password %>
+   <div class="account-content">
+      <p class="account-content-label">メールアドレス</p>
+      <%= @user.email %>
+   </div>
+
+   <div class="account-content">
+      <p class="account-content-label">パスワード</p>
+      <p>**********</p>
+   </div>
+</div>
