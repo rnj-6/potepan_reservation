@@ -44,6 +44,11 @@
                 <li>
                   <%= link_to "マイページ", users_path %>
                 </li>
+
+                <li>
+                  <%= link_to "施設の新規作成", new_room_path %>
+                </li>
+
                 <li>
                   <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
                 </li>
