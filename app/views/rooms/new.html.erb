@@ -1,36 +1,4 @@
 <div>
     <h2>新規登録</h2>
-    <%= form_with model: @room, url: users_profile_path, method: :get do |f| %>
-
-        <div>
-           <%= f.label :name, "施設名" %>
-           <%= f.text_field :name, placeholder: "施設名を入力" %>
-        </div>
-
-        <div>
-            <%= f.label :description, "施設詳細" %>
-            <%= f.text_field :description, placeholder: "施設詳細を入力" %>
-        </div>
-
-        <div>
-            <%= f.label :price, "料金" %>
-            <%= f.number_field :price, placeholder: "一日あたりの料金を入力" %>
-        </div>
-
-        <div>
-            <%= f.label :address, "住所" %>
-            <%= f.text_field :address, placeholder: "施設の住所を入力" %>
-        </div>
-
-        <div>
-            <%= f.label :image, "写真" %>
-            <%= f.file_field :image, id: "image-upload", hidden: true %>
-            <label for="image-upload">画像アップロード</label>
-        </div>
-
-        <div>
-            <%= f.submit "保存", class: "update-btn" %>
-            <%= link_to "キャンセル", request.referer || root_path, class: "cancel-btn" %>
-        </div>
-    <% end %>
+    <%= render "form" %>
 </div>
