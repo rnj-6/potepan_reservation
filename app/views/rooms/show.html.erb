@@ -1,4 +1,5 @@
-<div>
+<%# 白いカード %>
+<div class="room-show-card">
     <div>
         <%= link_to "◂ 戻る", request.referer || root_path, class: "back-btn" %>
         <% if @room.user == current_user %>
@@ -6,7 +7,7 @@
         <% end %>
     </div>
 
-    <div>
+    <div class="room-show-content">
         <div>
             <% if @room.image.attached? %>
                <%= image_tag @room.image.variant(resize_to_fill: [450, 300]) %>
@@ -15,12 +16,24 @@
             <% end %>
         </div>
 
-        <div>
-            <%= @room.name %>
-            <%= @room.price %>
-            <%= @room.address %>
-            <%= @room.description %>
-        </div>
+        <%# 青いカード %>
+        <div class="room-show-info">
 
+            <%# 名前と料金 %>
+            <div class="room-show-content-title">
+                <p class="room-show-name"><%= @room.name %></p>
+                <p class:="room-show-price">￥<%= @room.price %> ～</p>
+            </div>
+
+            <p class="room-show-address"><%= @room.address %></p>
+            <p class="room-show-description"><%= @room.description %></p>
+
+            <%# 予約に必要な情報（チェックイン/チェックアウト/人数） %>
+            <div>
+            </div>
+
+            <%# 予約ボタンのパスは後で追加 %>
+            <%= link_to "予約する" %>
+        </div>
     </div>
 </div>

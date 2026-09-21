@@ -119,3 +119,27 @@
     text-align: center;
 }
 
+/* 施設の詳細ページ */
+.room-show-card {
+    background-color: #ffffff;
+}
+
+.room-show-content {
+    display: flex;
+    margin: 0 30px;
+    gap: 30px;
+}
+
+/*.room-show-info {
+    box-sizing: border-box;
+    border: 3px solid #6495ed;
+    border-radius: 3px;
+}*/
+
+.room-show-info {
+    background-color: #ecf2ff;
+}
+
+.room-show-content-title {
+    display: flex;
+}
