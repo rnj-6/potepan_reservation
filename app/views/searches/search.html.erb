@@ -1,0 +1,31 @@
+<div>
+    <div class="results-search">
+        <%= render "searches/form" %>
+    </div>
+
+    <div class="results-card-container">
+        
+        <div class="results-card-design">
+            <p class="results-count"><span><%= @rooms.count %></span> 件見つかりました。</p>
+
+            <% @rooms.each do |room| %>
+                <div class="results-room-card">
+                    <% if room.image.attached? %>
+                        <%= image_tag room.image.variant(resize_to_fill: [330, 220]) %>
+                    <% else %>
+                        <%= image_tag "https://rails-02-sample.herokuapp.com/assets/room/default-image-4e0ac6b8d01335b5b22fe6586af13644ae51dddb6aeabf35b9174e80f13cd09d.png", width: 330, height: 220 %>
+                    <% end %>
+                    <div class="results-room-info">
+                        <h3 class="result-name"><%= room.name %></h3>
+                        <p class="result-address">📍<%= room.address %></p>
+                        <p class="result-escription"><%= room.description %></p>
+                        <div class="results-card-bottom">
+                            <p class="result-price">￥<%= room.price %> ～</p>
+                            <%= link_to "詳細を見る", room_path(room), class: "result-show-btn" %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>    
+    </div>
+<div>
