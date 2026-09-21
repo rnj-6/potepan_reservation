@@ -52,6 +52,10 @@
     width: 710px;
 }
 
+.room-form-card h2 {
+    margin-bottom: 30px;
+}
+
 .room-firld {
     display: flex;
     align-items: center;
