@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get "users/account/edit", to: "users#account_edit"
   patch "users/account", to: "users#account_update"
 
+  get "/search", to: "searches#search"
+
   # 施設一覧
   resources :rooms
 

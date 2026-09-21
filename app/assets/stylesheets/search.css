@@ -1,0 +1,42 @@
+/* ホーム画面の検索機能 */
+.fv-img {
+    background-image: url("https://www.pakutaso.com/shared/img/thumb/kumakichi0221026_TP_V.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fv-img h2 {
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.home-search {
+    background-color: rgba(255, 255, 225, 0.3);
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.home-search input {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin-bottom: 16px;
+    width: 450px;
+}
+
+.search-btn {
+    background-color: #ffc93c;
+    color: #204495;
+    font-weight: bold;
+    border: none !important;
+}

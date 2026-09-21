@@ -1,0 +1,7 @@
+<%= form_with url: search_path, method: :get, local: true do |f| %>
+
+    <p class="search-area"><%= f.text_field :area, placeholder: "エリアを入力（ 例：東京、大阪、渋谷など ）" %></p>
+    <p class="search-keyword"><%= f.text_field :keyword, placeholder: "キーワードを入力" %></p>
+    <%= f.submit "検索", class: "search-btn" %>
+
+<% end %>
