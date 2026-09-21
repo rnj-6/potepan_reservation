@@ -153,7 +153,8 @@ body {
     margin-bottom: 12px;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: #bdbdbd;
 }
 
