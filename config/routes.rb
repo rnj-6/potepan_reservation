@@ -19,7 +19,11 @@ Rails.application.routes.draw do
   get "/search", to: "searches#search"
 
   # 施設一覧
-  resources :rooms
+  resources :rooms do
+    resources :reservations do
+      post :confirm, on: :collection
+    end
+  end
 
   # トップページ
   root "home#index"

@@ -29,7 +29,7 @@
             <p class="room-show-address">📍<%= @room.address %></p>
             <p class="room-show-description"><%= @room.description %></p>
 
-            <%= form_with model: @reservation do |f| %>
+            <%= form_with model: @reservation, url: confirm_room_reservations_path(@room), method: :post, data: { turbo: false } do |f| %>
 
                 <%# 予約に必要な情報（チェックイン/チェックアウト/人数） %>
                 <div class="reserv-form-container">
