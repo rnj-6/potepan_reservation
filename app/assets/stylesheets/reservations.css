@@ -1,0 +1,111 @@
+/* 施設の詳細ページ */
+.room-show-card {
+    background-color: #ffffff;
+}
+
+.room-show-content {
+    display: flex;
+    margin: 0 30px;
+    gap: 30px;
+}
+
+.room-show-info {
+    background-color: #fffaec;
+    width: 700px;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+}
+
+.room-show-content-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.room-show-name {
+    color: #696969;
+    font-weight: bold;
+}
+
+.room-show-price {
+    font-weight: 700;
+}
+
+.room-show-address {
+    color: #696969;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.room-show-description {
+    color: #242424;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+/* 予約フォーム */
+.reserv-form-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    font-weight: bold;
+    background-color: #ffffff;
+    align-items: center;
+    width: 550px;
+    padding: 20px;
+}
+
+.reserv-form-container input[type="date"] {
+    color: #bdbdbd;
+}
+
+.date-firld,
+.guest-count-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-firld label,
+.guest-count-field label {
+    color: #696969;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.date-firld input {
+    height: 30px;
+    width: 150px;
+}
+
+.guest-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.guest-input {
+    height: 30px;
+    width: 150px;
+}
+
+.guest-unit {
+    font-size: 14px;
+    margin-left: 8px;
+    color: #4d4d4d;
+}
+
+.room-show-btn-menu {
+    display: flex;
+    justify-content: center;
+    color: #204495;
+    font-weight: bold;
+    background-color: #ffc93c;
+    width: 590px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px 0;
+    border-radius: 8px;
+}

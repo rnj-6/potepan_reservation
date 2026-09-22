@@ -16,40 +16,50 @@
             <% end %>
         </div>
 
-        <%# 青いカード %>
+        <%# 黄色のカード %>
         <div class="room-show-info">
 
             
             <%# 名前と料金 %>
             <div class="room-show-content-title">
                 <p class="room-show-name"><%= @room.name %></p>
-                <p class:="room-show-price">￥<%= @room.price %>~</p>
+                <p class="room-show-price">￥<%= @room.price %>~</p>
             </div>
 
-            <p class="room-show-address"><%= @room.address %></p>
+            <p class="room-show-address">📍<%= @room.address %></p>
             <p class="room-show-description"><%= @room.description %></p>
 
             <%= form_with model: @reservation do |f| %>
+
                 <%# 予約に必要な情報（チェックイン/チェックアウト/人数） %>
-                <div>
-                    <div>
+                <div class="reserv-form-container">
+                    <div class="date-firld">
                         <%= f.label :checkin_at, "チェックイン" %>
                         <%= f.date_field :checkin_at %>
                     </div>
 
-                    <div>
+                    <div class="date-firld">
                         <%= f.label :checkout_at, "チェックアウト" %>
                         <%= f.date_field :checkout_at %>
                     </div>
 
-                    <div>
-                        <%= f.label :gest_count, "人数" %>
-                        <%= f.number_field :gest_count, placeholder: "0" %><span>人</span>
+                    <div class="guest-count-field">
+                        <%= f.label :guest_count, "人数" %>
+
+                        <div class="guest-input-wrapper">
+                            <%= f.number_field :guest_count, placeholder: "0", class: "guest-input" %><span class="guest-unit">人</span>
+                        </div>
                     </div>
+
                 </div>
 
-                <%# 予約ボタンのパスは後で追加 %>
-                <%= link_to "予約する" %>
+                <div class="room-show-btn-menu">
+                    <% if user_signed_in? %>
+                        <%= f.submit "予約する", class: "room-show-reserv-btn" %>
+                    <% else %>
+                        <%= link_to "ログイン", new_user_session_path, class: "room-show-login-btn" %>
+                    <% end %>
+                </div>
             <% end %>
         </div>
     </div>
