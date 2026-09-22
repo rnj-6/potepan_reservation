@@ -1,2 +1,43 @@
-<h1>Reservations#confirm</h1>
-<p>Find me in app/views/reservations/confirm.html.erb</p>
+<div>
+    <div>
+        <h2>予約内容の確認</h2>
+        <div>
+            <p>チェックイン</p>
+            <%= @reservation.checkin_at %>
+        </div>
+
+        <div>
+            <p>チェックアウト</p>
+            <%= @reservation.checkout_at %>
+        </div>
+
+        <div>
+            <p>宿泊日数</p>
+            <%= @reservation.stay_nights %>
+        </div>
+
+        <div>
+            <p>人数</p>
+            <%= @reservation.guest_count %>
+        </div>
+
+        <div>
+            <p>支払い料金</p>
+            <p>￥<%= @reservation.total_price %></p>
+        </div>
+
+        
+        <%= form_with model: @reservation, url: room_reservations_path(@room), method: :post, data: { turbo: false } do |f| %>
+
+        <%= f.hidden_field :checkin_at %>
+        <%= f.hidden_field :checkout_at %>
+        <%= f.hidden_field :guest_count %>
+
+        <div>
+            <%= f.submit "予約を確定する" %>
+            <%= link_to "キャンセル", request.referer || root_path %>
+        </div>
+
+        <% end %>
+    </div>
+</div>
