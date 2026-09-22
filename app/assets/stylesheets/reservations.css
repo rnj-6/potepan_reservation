@@ -1,12 +1,17 @@
 /* 施設の詳細ページ */
-.room-show-card {
-    background-color: #ffffff;
+.room-show-btn-menu {
+    display: flex;
+    justify-content: space-between !important;
+    margin: 30px;
 }
 
 .room-show-content {
+    background-color: #ffffff;
     display: flex;
+    justify-content: center;
     margin: 0 30px;
     gap: 30px;
+    padding: 30px;
 }
 
 .room-show-info {
@@ -30,6 +35,7 @@
 
 .room-show-price {
     font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .room-show-address {
@@ -57,10 +63,6 @@
     padding: 20px;
 }
 
-.reserv-form-container input[type="date"] {
-    color: #bdbdbd;
-}
-
 .date-firld,
 .guest-count-field {
     display: flex;
@@ -77,6 +79,8 @@
 .date-firld input {
     height: 30px;
     width: 150px;
+    padding-left: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .guest-input-wrapper {
@@ -84,11 +88,10 @@
     align-items: center;
 }
 
-
-
 .guest-input {
     height: 30px;
-    width: 150px;
+    width: 80px;
+    padding-left: 8px;
 }
 
 .guest-unit {
@@ -100,12 +103,18 @@
 .room-show-btn-menu {
     display: flex;
     justify-content: center;
+}
+
+.room-show-reserv-btn,
+.room-show-login-btn {
+    border: none;
     color: #204495;
-    font-weight: bold;
     background-color: #ffc93c;
+    font-weight: bold;
     width: 590px;
     margin: 0 auto;
     margin-top: 30px;
     padding: 20px 0;
     border-radius: 8px;
+    font-size: 18px;
 }

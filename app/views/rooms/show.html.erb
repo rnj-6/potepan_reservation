@@ -1,12 +1,12 @@
 <%# 白いカード %>
-<div class="room-show-card">
-    <div>
+<div class="room-show-container">
+    <div class="room-show-btn-menu">
         <%= link_to "◂ 戻る", request.referer || root_path, class: "back-btn" %>
         <% if @room.user == current_user %>
-           <%= link_to "編集", edit_room_path, class: "edit-btn" %>
+            <%= link_to "編集", edit_room_path, class: "edit-btn" %>
         <% end %>
     </div>
-
+    
     <div class="room-show-content">
         <div>
             <% if @room.image.attached? %>

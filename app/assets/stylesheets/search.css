@@ -89,6 +89,7 @@ input:focus {
     grid-column: 1/ -1;
     font-size: 20px;
     font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .results-count span {
@@ -136,6 +137,7 @@ h3 {
 .result-price {
     font-weight: bold;
     font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .result-show-btn {
