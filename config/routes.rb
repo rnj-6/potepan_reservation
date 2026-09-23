@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "users/account/edit", to: "users#account_edit"
   patch "users/account", to: "users#account_update"
 
+  # 検索画面
   get "/search", to: "searches#search"
 
   # 施設一覧
@@ -24,6 +25,9 @@ Rails.application.routes.draw do
       post :confirm, on: :collection
     end
   end
+
+  # 予約一覧
+  resources :reservations, only: [:index]
 
   # トップページ
   root "home#index"

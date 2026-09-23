@@ -118,3 +118,9 @@
     border-radius: 8px;
     font-size: 18px;
 }
+
+.errorMessage {
+    font-weight: 400;
+    font-size: 9px;
+    color: rgb(248, 0, 0);
+}

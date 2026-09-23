@@ -27,7 +27,7 @@ class Reservation < ApplicationRecord
 
   def checkin_at_is_today_or_later
     return if checkin_at.blank?
-    if checkin_at < Date.curreunt
+    if checkin_at < Date.current
       errors.add(:checkin_at, "は本日以降の日付を選択してください")
     end
   end

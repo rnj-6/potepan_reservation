@@ -3,7 +3,7 @@
     <div class="room-show-btn-menu">
         <%= link_to "◂ 戻る", request.referer || root_path, class: "back-btn" %>
         <% if @room.user == current_user %>
-            <%= link_to "編集", edit_room_path, class: "edit-btn" %>
+            <%= link_to "編集", edit_room_path(@room), class: "edit-btn" %>
         <% end %>
     </div>
     
@@ -36,11 +36,23 @@
                     <div class="date-firld">
                         <%= f.label :checkin_at, "チェックイン" %>
                         <%= f.date_field :checkin_at %>
+
+                        <p class="errorMessage">
+                            <% if @reservation.errors[:checkin_at].any? %>
+                                *チェックイン日<%= @reservation.errors[:checkin_at].first %>
+                            <% end %>
+                        </p>
                     </div>
 
                     <div class="date-firld">
                         <%= f.label :checkout_at, "チェックアウト" %>
                         <%= f.date_field :checkout_at %>
+
+                        <p class="errorMessage">
+                            <% if @reservation.errors[:checkout_at].any? %>
+                                *チェックアウト日<%= @reservation.errors[:checkout_at].first %>
+                            <% end %>
+                        </p>
                     </div>
 
                     <div class="guest-count-field">
@@ -49,6 +61,12 @@
                         <div class="guest-input-wrapper">
                             <%= f.number_field :guest_count, placeholder: "0", class: "guest-input" %><span class="guest-unit">人</span>
                         </div>
+
+                        <p class="errorMessage">
+                            <% if @reservation.errors[:guest_count].any? %>
+                                *人数<%= @reservation.errors[:guest_count].first %>
+                            <% end %>
+                        </p>
                     </div>
 
                 </div>

@@ -1,16 +1,30 @@
 class ReservationsController < ApplicationController
-  before_action :set_room
+  before_action :set_room, only: [:confirm, :create]
 
   def confirm
-    Rails.logger.debug "===== CONFIRM CALLED ====="
-    Rails.logger.debug params.inspect
     @reservation = @room.reservations.new(reservation_params)
+    @reservation.user = current_user
+
+    if @reservation.valid?
+      render :confirm
+    else
+      render "rooms/show", status: :unprocessable_entity
+    end
   end
 
   def create
     @reservation = @room.reservations.new(reservation_params)
     @reservation.user = current_user
-    @reservation.save
+    
+    if @reservation.save
+      redirect_to reservations_path
+    else
+      render :confirm, status: :unprocessable_entity
+    end
+  end
+
+  def index
+    @reservations = current_user.reservations
   end
 
   private
