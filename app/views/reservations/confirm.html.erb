@@ -1,27 +1,28 @@
 <div>
-    <div>
+    <div class="confirm-card">
         <h2>予約内容の確認</h2>
-        <div>
+
+        <div class="confirm-field">
             <p>チェックイン</p>
-            <%= @reservation.checkin_at %>
+            <%= @reservation.checkin_at.strftime("%Y/%m/%d") %>
         </div>
 
-        <div>
+        <div class="confirm-field">
             <p>チェックアウト</p>
-            <%= @reservation.checkout_at %>
+            <%= @reservation.checkout_at.strftime("%Y/%m/%d") %>
         </div>
 
-        <div>
+        <div class="confirm-field">
             <p>宿泊日数</p>
-            <%= @reservation.stay_nights %>
+            <p><%= @reservation.stay_nights %>泊</p>
         </div>
 
-        <div>
+        <div class="confirm-field">
             <p>人数</p>
-            <%= @reservation.guest_count %>
+            <p><%= @reservation.guest_count %>人</p>
         </div>
 
-        <div>
+        <div class="confirm-field">
             <p>支払い料金</p>
             <p>￥<%= @reservation.total_price %></p>
         </div>
@@ -33,9 +34,11 @@
         <%= f.hidden_field :checkout_at %>
         <%= f.hidden_field :guest_count %>
 
-        <div>
-            <%= f.submit "予約を確定する" %>
-            <%= link_to "キャンセル", room_path(@room) %>
+        <p class="confirm-commnt">上記内容でよろしければ「確定」ボタンを押してください。</p>
+
+        <div class="btn-menu">
+            <%= f.submit "予約を確定する", class: "btn-reserv" %>
+            <%= link_to "キャンセル", room_path(@room), class: "btn-cancel" %>
         </div>
 
         <% end %>

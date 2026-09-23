@@ -131,3 +131,48 @@
     position: absolute;
 }
 
+/* 予約確認画面 */
+.confirm-card {
+    background-color: #ffffff;
+    margin: 60px auto;
+    padding: 30px;
+    width: 600px;
+}
+
+.confirm-card h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.confirm-field {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.confirm-commnt {
+    color: #696969;
+    margin: 20px 0;
+}
+
+.btn-reserv,
+.btn-cancel {
+    font-size: 16px;
+    padding: 20px 0;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.btn-reserv {
+    color: #204495;
+    background-color: #ffc93c;
+    border: none;
+}
+
+.btn-cancel {
+    background-color: #ffffff;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #86a2e4;
+    color: #204495; 
+}
