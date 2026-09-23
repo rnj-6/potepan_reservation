@@ -1,0 +1,160 @@
+/* ホーム画面の検索機能 */
+.fv-img {
+    background-image: url("https://photoshopvip.net/wp-content/uploads/2016/09/yamaguchi_1-768x432.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fv-img h2 {
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.home-search {
+    background-color: rgba(255, 255, 225, 0.5);
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.home-search input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin-bottom: 16px;
+    width: 450px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.search-btn {
+    background-color: #ffc93c;
+    color: #204495;
+    font-weight: bold;
+    border: none !important;
+}
+
+/* 検索結果画面の検索欄 */
+.results-search form {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.results-search .search-area input,
+.results-search .search-keyword input {
+    height: 45px;
+    width: 300px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+.results-search .search-btn {
+    height: 45px;
+    width: 80px;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+/* 検索結果表示 */
+.results-card-container {
+    background-color: #ffffff;
+}
+
+.results-card-design {
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    gap: 20px;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.results-count {
+    grid-column: 1/ -1;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.results-count span {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+/* 部屋1件ごとの装飾 */
+.results-room-card {
+    background-color: #fffaec;
+    border-radius: 8px;
+    width: 330px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.results-room-card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.result-name {
+    color: #525252;
+    font-size: 20px;
+}
+
+.result-address {
+    color: #4e4e4e;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.result-description {
+    color: #4e4e4e;
+    margin-top: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 70px;
+}
+
+.result-price {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.result-show-btn {
+    color: #204495;
+    background-color: #ffc93c;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.results-card-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.results-room-info {
+    padding: 20px;
+}

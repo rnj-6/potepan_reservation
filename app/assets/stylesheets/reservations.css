@@ -1,0 +1,178 @@
+/* 施設の詳細ページ */
+.room-show-btn-menu {
+    display: flex;
+    justify-content: space-between !important;
+    margin: 30px;
+}
+
+.room-show-content {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin: 0 30px;
+    gap: 30px;
+    padding: 30px;
+}
+
+.room-show-info {
+    background-color: #fffaec;
+    width: 700px;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+}
+
+.room-show-content-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.room-show-name {
+    color: #696969;
+    font-weight: bold;
+}
+
+.room-show-price {
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.room-show-address {
+    color: #696969;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.room-show-description {
+    color: #242424;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+/* 予約フォーム */
+.reserv-form-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    font-weight: bold;
+    background-color: #ffffff;
+    align-items: center;
+    width: 550px;
+    padding: 35px 20px;
+}
+
+.date-firld,
+.guest-count-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.date-firld label,
+.guest-count-field label {
+    color: #696969;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.date-firld input {
+    height: 30px;
+    width: 150px;
+    padding-left: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.guest-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.guest-input {
+    height: 30px;
+    width: 80px;
+    padding-left: 8px;
+}
+
+.guest-unit {
+    font-size: 14px;
+    margin-left: 8px;
+    color: #4d4d4d;
+}
+
+.room-show-btn-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.room-show-reserv-btn,
+.room-show-login-btn {
+    border: none;
+    color: #204495;
+    background-color: #ffc93c;
+    font-weight: bold;
+    width: 590px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px 0;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.reserv-error-message {
+    font-weight: 400;
+    font-size: 9px;
+    color: rgb(248, 0, 0);
+    margin-top: 60px;
+    width: 150px;
+    flex-direction: column-reverse;
+    position: absolute;
+}
+
+/* 予約確認画面 */
+.confirm-card {
+    background-color: #ffffff;
+    margin: 60px auto;
+    padding: 30px;
+    width: 600px;
+}
+
+.confirm-card h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.confirm-field {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.confirm-commnt {
+    color: #696969;
+    margin: 20px 0;
+}
+
+.btn-reserv,
+.btn-cancel {
+    font-size: 16px;
+    padding: 20px 0;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.btn-reserv {
+    color: #204495;
+    background-color: #ffc93c;
+    border: none;
+}
+
+.btn-cancel {
+    background-color: #ffffff;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #86a2e4;
+    color: #204495; 
+}

@@ -1,0 +1,46 @@
+<div class="room-index-card">
+    <h2>予約済みリスト</h2>
+
+    <table class="room-index-table">
+        <tr>
+            <th>写真</th>
+            <th>施設名</th>
+            <th>施設詳細</th>
+            <th>支払い料金</th>
+            <th>チェックイン日</th>
+            <th>チェックアウト日</th>
+            <th>予約確定日時</th>
+        </tr>
+
+        <% @reservations.each do |reservation| %>
+            <tr>
+                <td class="index-room-image">
+                    <%= link_to room_path(reservation.room) do %>
+                        <% if reservation.room.image.attached? %>
+                            <%= image_tag reservation.room.image.variant(resize_to_fill: [100, 67]) %>
+                        <% else %>
+                            <%= image_tag "https://rails-02-sample.herokuapp.com/assets/room/default-image-4e0ac6b8d01335b5b22fe6586af13644ae51dddb6aeabf35b9174e80f13cd09d.png", width: 100, height: 67 %>
+                        <% end %>
+                    <% end %>
+                </td>
+
+                <td class="index-room-name">
+                    <%= link_to room_path(reservation.room) do %>
+                        <%= reservation.room.name %>
+                    <% end %>
+                </td>
+
+                <td class="index-description">
+                    <div class="description-text">
+                        <%=  reservation.room.description %>
+                    </div>
+                </td>
+                <td>￥<%= reservation.total_price %>~</td>
+                <td><%= reservation.checkin_at.strftime("%Y/%m/%d") %></td>
+                <td><%= reservation.checkout_at.strftime("%Y/%m/%d") %></td>
+                <td><%= reservation.created_at.strftime("%Y/%m/%d %H:%M") %></td>
+            </tr>
+        <% end %>
+    </table>
+
+</div>
