@@ -48,6 +48,10 @@
     max-width: 180px;
 }
 
+.index-room-name a {
+    color: #204495;
+}
+
 .index-description {
     width: 300px;
     max-width: 300px;

@@ -24,7 +24,12 @@
                     <% end %>
                 </td>
 
-                <td class="index-room-name"><%= room.name %></td>
+                <td class="index-room-name">
+                    <%= link_to room_path(room) do %>
+                        <%= room.name %>
+                    <% end %>
+                </td>
+
                 <td class="index-description">
                     <div class="description-text">
                         <%= room.description %>
