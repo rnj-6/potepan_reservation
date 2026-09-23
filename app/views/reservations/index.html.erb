@@ -1,7 +1,7 @@
-<div>
-    <h2>予約一覧</h2>
+<div class="room-index-card">
+    <h2>予約済みリスト</h2>
 
-    <table class="reserv-index-table">
+    <table class="room-index-table">
         <tr>
             <th>写真</th>
             <th>施設名</th>
@@ -14,7 +14,7 @@
 
         <% @reservations.each do |reservation| %>
             <tr>
-                <td>
+                <td class="index-room-image">
                     <%= link_to room_path(reservation.room) do %>
                         <% if reservation.room.image.attached? %>
                             <%= image_tag room.image.variant(resize_to_fill: [100, 67]) %>
@@ -24,16 +24,20 @@
                     <% end %>
                 </td>
 
-                <td>
+                <td class="index-room-name">
                     <%= link_to room_path(reservation.room) do %>
                         <%= reservation.room.name %>
                     <% end %>
                 </td>
 
-                <td><%=  reservation.room.description %></td>
+                <td class="index-description">
+                    <div class="description-text">
+                        <%=  reservation.room.description %>
+                    </div>
+                </td>
                 <td>￥<%= reservation.total_price %>~</td>
-                <td><%= reservation.checkin_at %></td>
-                <td><%= reservation.checkout_at %></td>
+                <td><%= reservation.checkin_at.strftime("%Y/%m/%d") %></td>
+                <td><%= reservation.checkout_at.strftime("%Y/%m/%d") %></td>
                 <td><%= reservation.created_at.strftime("%Y/%m/%d %H:%M") %></td>
             </tr>
         <% end %>

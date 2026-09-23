@@ -42,15 +42,19 @@
 
               <ul data-dropdown-target="menu" class="dropdown-menu">
                 <li>
-                  <%= link_to "マイページ", users_path %>
-                </li>
-
-                <li>
                   <%= link_to "施設の新規作成", new_room_path %>
                 </li>
 
                 <li>
                   <%= link_to "作成した施設一覧", rooms_path %>
+                </li>
+
+                <li>
+                  <%= link_to "予約済みリスト", reservations_path %>
+                </li>
+                
+                <li>
+                  <%= link_to "マイページ", users_path %>
                 </li>
 
                 <li>

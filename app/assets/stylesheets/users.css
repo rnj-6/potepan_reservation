@@ -6,6 +6,10 @@ ul {
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
 body, p, h2, span {
     margin: 0;
 }
@@ -28,7 +32,6 @@ body, p, h2, span {
 }
 
 .header-container {
-    list-style: none;
     display: flex;
     margin-right: 30px;
 }
@@ -90,9 +93,7 @@ body, p, h2, span {
     background-color: #ffc93c;
     border-radius: 4px; 
     padding: 2px 10px;
-    position: absolute;
-    left: 22px;
-
+    right: 1px;
 }
 
 .dropdown-menu li {
@@ -319,4 +320,29 @@ textarea::placeholder {
     border: 1px solid #bdbdbd;
     border-radius: 4px;
     padding: 8px 16px;
+}
+
+/* マイページ */
+.card-design-mypage-synthetic {
+    background-color: #ffffff;
+    margin: 60px auto;
+    padding: 30px;
+    width: 600px;
+}
+
+.card-design-mypage-synthetic h2 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.mypage-synthetic-link li {
+    border-bottom: 1px solid #d9d9d9;
+    padding:15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mypage-synthetic-link li a {
+    color: #204495;
+    margin: 0 20px;
 }

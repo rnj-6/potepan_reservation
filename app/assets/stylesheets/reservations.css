@@ -60,13 +60,14 @@
     background-color: #ffffff;
     align-items: center;
     width: 550px;
-    padding: 20px;
+    padding: 35px 20px;
 }
 
 .date-firld,
 .guest-count-field {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .date-firld label,
@@ -117,10 +118,27 @@
     padding: 20px 0;
     border-radius: 8px;
     font-size: 18px;
+    text-align: center;
 }
 
 .errorMessage {
     font-weight: 400;
     font-size: 9px;
     color: rgb(248, 0, 0);
+    margin-top: 60px;
+    width: 150px;
+    flex-direction: column-reverse;
+    position: absolute;
 }
+
+/* 予約済みリスト */
+/*.result-description {
+    color: #4e4e4e;
+    margin-top: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 70px;
+}*/
+

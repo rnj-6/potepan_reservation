@@ -14,7 +14,7 @@
 
         <% @rooms.each do |room| %>
             <tr>
-                <td>
+                <td class="index-room-image">
                     <%= link_to room_path(room) do %>
                         <% if room.image.attached? %>
                             <%= image_tag room.image.variant(resize_to_fill: [100, 67]) %>
@@ -24,8 +24,12 @@
                     <% end %>
                 </td>
 
-                <td><%= room.name %></td>
-                <td><%= room.description %></td>
+                <td class="index-room-name"><%= room.name %></td>
+                <td class="index-description">
+                    <div class="description-text">
+                        <%= room.description %>
+                    </div>
+                </td>
                 <td>￥<%= room.price %>~</td>
                 <td><%= room.updated_at.strftime("%Y/%m/%d") %></td>
                 <td><%= link_to "編集", edit_room_path(room), class: "room-index-link" %></td>

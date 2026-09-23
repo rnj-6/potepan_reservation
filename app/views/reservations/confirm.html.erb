@@ -35,7 +35,7 @@
 
         <div>
             <%= f.submit "予約を確定する" %>
-            <%= link_to "キャンセル", request.referer || root_path %>
+            <%= link_to "キャンセル", room_path(@room) %>
         </div>
 
         <% end %>
