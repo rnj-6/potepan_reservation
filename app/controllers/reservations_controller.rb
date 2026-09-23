@@ -17,6 +17,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     
     if @reservation.save
+      flash[:notice] = "予約が完了しました"
       redirect_to reservations_path
     else
       render :confirm, status: :unprocessable_entity

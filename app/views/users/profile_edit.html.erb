@@ -1,7 +1,7 @@
 <div class="card-design-mypage-edit">
   <h2 class="card-design-title">プロフィール</h2>
 
-  <%= form_with model: @user, url: users_profile_path, method: :patch do |f| %>
+  <%= form_with model: @user, url: users_profile_path, method: :patch, local: true do |f| %>
 
     <div class="image-content">
       <% if @user.image.attached? %>

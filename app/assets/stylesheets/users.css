@@ -154,6 +154,14 @@ body {
     margin-bottom: 12px;
 }
 
+.reg-error-message {
+    font-weight: 400;
+    font-size: 9px;
+    color: rgb(248, 0, 0);
+    margin-top: -10px;
+    margin-bottom: 8px;
+}
+
 input::placeholder,
 textarea::placeholder {
     color: #bdbdbd;
@@ -315,7 +323,7 @@ textarea::placeholder {
     background-color: #f8f8f8;
     font-size: 12px;
     font-weight: bold;
-    margin-left: 78px;
+    margin-left: 95px;
     box-sizing: border-box;
     border: 1px solid #bdbdbd;
     border-radius: 4px;
@@ -345,4 +353,22 @@ textarea::placeholder {
 .mypage-synthetic-link li a {
     color: #204495;
     margin: 0 20px;
+}
+
+/* フラッシュメッセージ */
+.flash-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.flash-notice,
+.flash-alert {
+    background-color: #181818;
+    color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 6px;
+    font-size: 12px;
 }

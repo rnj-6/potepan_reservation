@@ -77,5 +77,21 @@
     </header>
 
     <%= yield %>
+
+    <div class="flash-message">
+      
+      <% if flash[:notice] %>
+        <p class="flash-notice">
+          <%= flash[:notice] %>
+        </p>
+      <% end %>
+
+      <% if flash[:alert] %>
+        <p class="flash-alert">
+          <%= flash[:alert] %>
+        </p>
+      <% end %>
+    </div>
+
   </body>
 </html>

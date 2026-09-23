@@ -10,9 +10,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super do |resource|
+      if resource.persisted?
+        flash[:notice] = "新規登録が完了しました"
+      else
+        flash[:alert] = "新規登録に失敗しました"
+      end
+    end
+  end
 
   # GET /resource/edit
   # def edit

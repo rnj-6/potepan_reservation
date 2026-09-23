@@ -7,14 +7,22 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    super do |resource|
+      if resource.persisted?
+        flash[:notice] = "ログインが完了しました"
+      else
+        flash[:alert] = "ログインに失敗しました"
+      end
+    end
+  end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super do |resource|
+      flash[:notice] = "ログアウトしました"
+    end
+  end
 
   protected
 

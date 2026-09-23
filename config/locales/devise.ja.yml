@@ -1,0 +1,6 @@
+ja:
+  devise:
+    registrations:
+      signed_up: "新規登録が完了しました"
+    failure:
+      invalid: "メールアドレスまたはパスワードが正しくありません"

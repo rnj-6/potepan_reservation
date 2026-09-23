@@ -37,7 +37,7 @@
                         <%= f.label :checkin_at, "チェックイン" %>
                         <%= f.date_field :checkin_at %>
 
-                        <p class="errorMessage">
+                        <p class="reserv-error-message">
                             <% if @reservation.errors[:checkin_at].any? %>
                                 *チェックイン日<%= @reservation.errors[:checkin_at].first %>
                             <% end %>
@@ -48,7 +48,7 @@
                         <%= f.label :checkout_at, "チェックアウト" %>
                         <%= f.date_field :checkout_at %>
 
-                        <p class="errorMessage">
+                        <p class="reserv-error-message">
                             <% if @reservation.errors[:checkout_at].any? %>
                                 *チェックアウト日<%= @reservation.errors[:checkout_at].first %>
                             <% end %>
@@ -62,7 +62,7 @@
                             <%= f.number_field :guest_count, placeholder: "0", class: "guest-input" %><span class="guest-unit">人</span>
                         </div>
 
-                        <p class="errorMessage">
+                        <p class="reserv-error-message">
                             <% if @reservation.errors[:guest_count].any? %>
                                 *人数<%= @reservation.errors[:guest_count].first %>
                             <% end %>
